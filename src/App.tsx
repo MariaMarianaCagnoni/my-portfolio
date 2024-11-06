@@ -1,12 +1,11 @@
-import { useState } from 'react'
-
+import Home from "./pages/Home/Home"
 
 const App = () => {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      app
+      
+      <Home />
     </>
 
   )
