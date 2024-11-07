@@ -1,7 +1,6 @@
-import { createTheme,  } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
-
-const theme = createTheme({
+let theme = createTheme({
     palette: {
         primary: {
             main: '#232323',
@@ -10,10 +9,23 @@ const theme = createTheme({
             main: '#4f8e3e',
         },
     },
-    typography:{
-        fontFamily:"Helvetica Neue"
+    typography: {
+        fontFamily: [
+            '"Helvetica Neue"',
+            // '-apple-system',
+            // 'BlinkMacSystemFont',
+            // '"Segoe UI"',
+            // 'Roboto',
+            // '"Helvetica Neue"',
+            // 'Arial',
+            // 'sans-serif',
+            // '"Apple Color Emoji"',
+            // '"Segoe UI Emoji"',
+            // '"Segoe UI Symbol"',
+        ].join(','),
     }
 });
 
+theme = responsiveFontSizes(theme);
 
 export default theme;
